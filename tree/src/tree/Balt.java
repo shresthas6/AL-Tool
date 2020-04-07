@@ -15,6 +15,14 @@ public class Balt {
 	public static int amin;
 	public static ArrayList<String> contacts = new ArrayList<>();
 	public String cName,cNum;
+	private static final Insets insets = new Insets(0, 0, 0, 0);
+
+	private static void addComponent(Container container, Component component, int gridx, int gridy,
+		      int gridwidth, int gridheight, int anchor, int fill) {
+		    GridBagConstraints gbc = new GridBagConstraints(gridx, gridy, gridwidth, gridheight, 1.0, 1.0,
+		        anchor, fill, insets, 0, 0);
+		    container.add(component, gbc);
+		  }
 	
 	public static void ShowImage(String filepath)
 	{
@@ -79,6 +87,9 @@ public class Balt {
     
     c.gridx = 0;
     c.gridy = 1;
+    c.gridwidth = 4;
+    c.ipady = 200;
+    c.ipadx = 200;
     //c.gridheight = 10;
     //c.gridwidth = 10;
     JTextArea tf =new JTextArea(10,20);  
@@ -90,17 +101,25 @@ public class Balt {
     JButton b2 = new JButton("Set New Alarm");
     JButton b3 = new JButton("Add Contacts");
     JButton b4 = new JButton("View Contacts");
-    b1.setBounds(3,3,1000,1000);  
+    //b1.setBounds(3,0,1000,1000);  
     b2.setBounds(4,3,1000,1000);
+    //b1.setSize(150, 90);
+    c.ipady = 100;
+    c.ipadx = 80;
+    c.gridx = 0;
+    c.gridy = 3;
+    c.gridwidth = 1;
+    b1.setSize(new Dimension(5000,5000));
+    panel.add(b1, c);
+    c.gridx = 1;
+    c.gridy = 3;
+    
+    panel.add(b2,c);
+    c.gridx = 2;
+    c.gridy = 3;
+    panel.add(b3,c);
     c.gridx = 3;
     c.gridy = 3;
-    panel.add(b1,c);
-    c.gridx = 3;
-    c.gridy = 4;
-    panel.add(b2,c);
-    c.gridy = 5;
-    panel.add(b3,c);
-    c.gridy = 6;
     panel.add(b4,c);
     
     
