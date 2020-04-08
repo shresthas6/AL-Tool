@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalTime;
 import java.util.Random;
 
@@ -87,6 +89,17 @@ class AlarmThread implements Runnable
             		f.getContentPane().add(lbl,BorderLayout.SOUTH);
                     b.addActionListener(new ActionListener(){  
                 public void actionPerformed(ActionEvent e){  
+                	try {
+						FileWriter fw=new FileWriter(new File("tree\\src", "log.txt"));
+						fw.write("Write Time"); 
+						  
+				        System.out.println("Writing successful"); 
+				        //close the file  
+				        fw.close(); 
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
                             tf.setText("Your Response Has been Received!");  
                         }  
                     });  

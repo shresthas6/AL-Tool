@@ -70,10 +70,13 @@ public class Balt {
 	}
     JLabel lbl = new JLabel();
     lbl.setIcon(new ImageIcon(img));
+    JLabel lb2 = new JLabel();
+    lbl.setIcon(new ImageIcon(img));
     c.gridx = 4;
     c.gridy = 6;
     
-    f.getContentPane().add(lbl,BorderLayout.WEST);
+    f.getContentPane().add(lbl,BorderLayout.AFTER_LINE_ENDS);
+    f.getContentPane().add(lb2,BorderLayout.CENTER);
     
     JLabel l1 = new JLabel("My Alarms");
 
