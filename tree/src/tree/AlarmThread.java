@@ -27,7 +27,7 @@ import javafx.concurrent.Task;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-class AlarmThread implements Runnable 
+class AlarmThread implements Runnable //comments added
 { 
 	private boolean exit = false;
 	String aSound = "src\\tree\\alarm.wav";
