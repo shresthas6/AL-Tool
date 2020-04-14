@@ -27,7 +27,7 @@ import javafx.concurrent.Task;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-class AlarmThread1 implements Runnable //comments added
+class AlarmThread2 implements Runnable //comments added
 { 
 	private boolean exit = false;
 	String aSound = "src\\tree\\alarm.wav";
@@ -63,7 +63,7 @@ class AlarmThread1 implements Runnable //comments added
         	while (exit == false)
         	{   
 	        		LocalTime here = LocalTime.now();
-	        		if (here.getMinute() == Balt.amin1 && here.getHour() == Balt.ahr1)  //0-23 hours
+	        		if (here.getMinute() == Balt.amin2 && here.getHour() == Balt.ahr2)  //0-23 hours
 	        		{
 	        			JFrame f=new JFrame("Reminder Alarm");  
 	        			JTextArea tf =new JTextArea(10,20);  
