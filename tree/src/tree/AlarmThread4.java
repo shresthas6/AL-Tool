@@ -28,7 +28,7 @@ import javafx.concurrent.Task;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-class AlarmThread2 implements Runnable //comments added
+class AlarmThread3 implements Runnable //comments added
 { 
 	private boolean exit = false;
 	String aSound = "src\\tree\\alarm.wav";
@@ -64,7 +64,7 @@ class AlarmThread2 implements Runnable //comments added
         	while (exit == false)
         	{   
 	        		LocalTime here = LocalTime.now();
-	        		if (here.getMinute() == Balt.amin2 && here.getHour() == Balt.ahr2)  //0-23 hours
+	        		if (here.getMinute() == Balt.amin3 && here.getHour() == Balt.ahr3)  //0-23 hours
 	        		{
 	        			JFrame f=new JFrame("Reminder Alarm");  
 	        			JTextArea tf =new JTextArea(10,20);  
@@ -95,8 +95,8 @@ class AlarmThread2 implements Runnable //comments added
 					        public void actionPerformed(ActionEvent e) {
 					          f.dispose();
 					          try {
-									FileWriter fw=new FileWriter(new File("src\\tree", "log.txt"),true);
-									fw.write("Event 2 NOT ATTEMPTED: \n"+LocalTime.now()); 
+									FileWriter fw=new FileWriter(new File("C:\\Users\\USER\\Desktop\\A6", "log.txt"),true);
+									fw.write("Event 3 NOT ATTEMPTED: \n"+LocalTime.now()); 
 									  
 							        System.out.println("Writing successful"); 
 							        //close the file  
@@ -112,8 +112,8 @@ class AlarmThread2 implements Runnable //comments added
 	                    b.addActionListener(new ActionListener(){  
 	                public void actionPerformed(ActionEvent e){  
 	                	try {
-							FileWriter fw=new FileWriter(new File("C:\\Users\\USER\\Desktop\\A6", "log.txt"),true);
-							fw.write("Event 2 Completed at:"+LocalTime.now()+"\n"); 
+							FileWriter fw=new FileWriter(new File("src\\tree", "log.txt"),true);
+							fw.write("Event 3 Completed at:"+LocalTime.now()+"\n"); 
 							  
 					        System.out.println("Writing successful"); 
 					        //close the file  

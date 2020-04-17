@@ -2,5 +2,13 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Desktop/EDwin/lib/jxbrowser-7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Desktop/EDwin/lib/jxbrowser-javafx-7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Desktop/EDwin/lib/jxbrowser-linux64-7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Desktop/EDwin/lib/jxbrowser-linux64-arm-7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Desktop/EDwin/lib/jxbrowser-mac-7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Desktop/EDwin/lib/jxbrowser-swing-7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Desktop/EDwin/lib/jxbrowser-win32-7.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Desktop/EDwin/lib/jxbrowser-win64-7.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

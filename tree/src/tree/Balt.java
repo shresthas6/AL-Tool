@@ -1,4 +1,5 @@
 package tree;
+
 import java.awt.*;
 //import java.awt.GridBagConstraints;
 //import java.awt.GridBagLayout;
@@ -76,7 +77,7 @@ public class Balt {
     c.gridx = 4;
     c.gridy = 6;
     
-    JLabel im = new JLabel(new ImageIcon(((new ImageIcon("C:\\Users\\USER\\Desktop\\cimage.jpg")).getImage()).getScaledInstance(50, 50, java.awt.Image.SCALE_FAST)));
+    JLabel im = new JLabel(new ImageIcon(((new ImageIcon("src\\tree\\cimage.jpg")).getImage()).getScaledInstance(50, 50, java.awt.Image.SCALE_FAST)));
     
     //f.getContentPane().add(lbl,BorderLayout.AFTER_LINE_ENDS);
     //f.getContentPane().add(lb2,BorderLayout.CENTER);
@@ -107,18 +108,23 @@ public class Balt {
     tf.setPreferredSize(new Dimension(450,150));
     //tf.setBounds(50,100,95,30);  
     panel.add(tf,c);
+    c.gridy = 2;
+    c.ipady = 5;
+    c.ipadx = 20;
+    
+    panel.add(new VisualClock(),c);
     
     JButton ab1 = new JButton("Alarm 1");
     JButton ab2 = new JButton("Alarm 2");
     JButton ab3 = new JButton("Alarm 3");
     
-    JButton b1 = new JButton("To Do Lists");  
+    JButton b1 = new JButton("Nearby Pharmacies");  
     JButton b2 = new JButton("Set New Alarm");
     //JButton b3 = new JButton("Add Contacts");
     JButton b4 = new JButton("View Contacts");
     //b1.setBounds(3,0,1000,1000);  
     b2.setBounds(4,3,1000,1000);
-    JButton b3 = new JButton(new ImageIcon(((new ImageIcon("C:\\Users\\USER\\Desktop\\cimage.jpg")).getImage()).getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH)));
+    JButton b3 = new JButton(new ImageIcon(((new ImageIcon("src\\tree\\cimage.jpg")).getImage()).getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH)));
     //b3.setIcon(new ImageIcon("C:\\Users\\USER\\Desktop\\cimage.jpg"));
     //b1.setSize(150, 90);
     c.ipady = 400;
@@ -145,8 +151,10 @@ public class Balt {
 
         public void actionPerformed(ActionEvent e)
         {  
-            //ShowImage("C:\\Users\\USER\\Desktop\\red.jpg");
-        	tf.setText("Create the list to add all the Alarms");  
+            LocatePharmacies John = new LocatePharmacies();
+            John.locate();
+        	//ShowImage("C:\\Users\\USER\\Desktop\\red.jpg");
+        	//tf.setText("Create the list to add all the Alarms");  
         }  
     });  
     
@@ -192,6 +200,7 @@ public class Balt {
 				    f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 					
 					object1.start();
+					
 					
 				}
             	
